@@ -21,4 +21,5 @@ do
     fi
 done
 IFS=$SAVEIFS
+echo "Commit ok, no focused tests found in staged changes"
 exit
