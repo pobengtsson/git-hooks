@@ -30,6 +30,8 @@ or,
     [core]
         hooksPath = path/to/hooks/in/the/repo
 
+*NOTE* If the repo has config for hooksPath, it will override the global configuration.
+
 ## Troubleshooting
 
 ### Execution rights
