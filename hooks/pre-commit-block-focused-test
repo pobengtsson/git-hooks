@@ -16,7 +16,7 @@ do
     # Check if the file contains patterns
     if grep -q -e '^ *fdescribe(\"' -e '^ *fcontext(\"' -e '^ *fit(\"' $FILE
     then
-        echo $FILE  'Commit blocked to prevent commiting test focus. (do not commmit fdescribe, fcontext, or fit)'
+        echo $FILE  ': Commit blocked to prevent commiting test focus. (do not commmit fdescribe, fcontext, or fit)'
         exit 1
     fi
 done
