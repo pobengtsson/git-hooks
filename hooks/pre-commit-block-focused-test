@@ -10,8 +10,8 @@ else
 fi
 
 SAVEIFS=$IFS
-IFS="\n"
-for FILE in `git diff-index --name-status $against -- | cut -c3-`
+IFS=$'\n'
+for FILE in `git diff-index --name-status $against | grep "^[AM]" | cut -c3-`
 do
     # Check if the file contains patterns
     if grep -q -e '^ *fdescribe(\"' -e '^ *fcontext(\"' -e '^ *fit(\"' $FILE
