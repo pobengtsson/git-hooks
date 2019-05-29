@@ -14,7 +14,7 @@ IFS=$'\n'
 for FILE in `git diff-index --diff-filter=AM --name-only $against`
 do
     # Check if the file contains patterns
-    if git grep --cached -q -e '^ *fdescribe(\"' -e '^ *fcontext(\"' -e '^ *fit(\"' -- $FILE
+    if git grep --cached -q -e '^ *fdescribe' -e '^ *fcontext' -e '^ *fit' -- $FILE
     then
         echo $FILE  ': Commit blocked to prevent commiting test focus. (do not commit fdescribe, fcontext, or fit)'
         exit 1
