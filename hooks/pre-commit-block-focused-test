@@ -17,6 +17,7 @@ do
     if git grep --cached -q -e '^ *fdescribe' -e '^ *fcontext' -e '^ *fit' -- $FILE
     then
         echo $FILE  ': Commit blocked to prevent commiting test focus. (do not commit fdescribe, fcontext, or fit)'
+	echo -e "\a"
         exit 1
     fi
 done
